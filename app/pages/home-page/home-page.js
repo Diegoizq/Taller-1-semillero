@@ -21,12 +21,53 @@ class HomePage extends CellsPage {
     this.pokemonList = [];
     this.fetchPokemonData();
   }
+  static get styles() {
+    return css`
+    
 
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+     .pokemon-card {
+      display: flex;
+      border: 2px solid rgb(204, 204, 204);
+      border-radius: 10px;
+      padding: 10px;
+      margin: 20px;
+      text-align: center;
+      background-color: rgb(249, 249, 249);
+      flex-flow: wrap;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 300px;
+      align-content: center;
+}
+     }
+
+     .pokemon-container {
+        padding: 1rem;
+     }
+
+     .container {
+        display: flex;
+        flex-flow: row wrap;
+        background-color: #B9D9C3;
+        text-align: center;
+     }
+
+     .evolutions-button {
+        background-color: rgb(13, 128, 13);
+        border-radius: 10px;
+     }
+    `;
+  }
   async fetchPokemonData() {
     try {
       // Obtener todos los Pokémon (puedes ajustar el offset y limit si es necesario)
       const response = await fetch(
-        'https://pokeapi.co/api/v2/pokemon?offset=0&limit=10'
+        'https://pokeapi.co/api/v2/pokemon?offset=0&limit=50'
       );
       const data = await response.json();
 

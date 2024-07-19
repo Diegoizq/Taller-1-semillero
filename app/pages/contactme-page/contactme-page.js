@@ -34,7 +34,48 @@ class ContactMePage extends CellsPage {
       'El éxito es la suma de pequeños esfuerzos repetidos día tras día. - Robert Collier'
     ];
   }
+  static get styles() {
+    return css`
+    
 
+      .container {
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      h3 {
+        color: #0070c9;
+        border-bottom: 2px solid #0070c9;
+        padding-bottom: 10px;
+      };
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      ol, ul {
+        margin: 20px 0;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+     .container {
+
+        flex-flow: row wrap;
+        background-color: #B9D9C3;
+        text-align: center;
+     }
+
+     .evolutions-button {
+        background-color: rgb(13, 128, 13);
+        border-radius: 10px;
+     }
+
+    `;
+  }
 
   render() {
     return html`
